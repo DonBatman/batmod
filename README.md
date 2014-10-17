@@ -16,4 +16,6 @@ The Batman mod is licened under "wtfpl"
        **       ***       **
         **       *       **
 
+There is also cobble extras. just go into the batmod/bat_blocks folder and edit the init file. uncomment the dofile line for cobbleextras.lua
+
 
