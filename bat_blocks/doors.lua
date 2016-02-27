@@ -10,9 +10,8 @@ doors.register_door("bat_blocks:bat_door", {
 	description = "Bat Door",
 	inventory_image = "batdoor_inv.png",
 	groups = {choppy=2,cracky=2,door=1},
-	tiles_bottom = {"batdoor_bottom.png", "batdoor_edge.png"},
-	tiles_top = {"batdoor_top.png", "batdoor_edge.png"},
-	only_placer_can_open = true,
+	tiles = {"batdoor.png"},
+	protected = true,
 })
 
 minetest.register_craft({
@@ -30,9 +29,8 @@ doors.register_door("bat_blocks:bat_door_unlocked", {
 	description = "Bat Door Unlocked",
 	inventory_image = "batdoor_unlocked_inv.png",
 	groups = {choppy=2,cracky=2,door=1},
-	tiles_bottom = {"batdoor_bottom.png", "batdoor_edge.png"},
-	tiles_top = {"batdoor_unlocked_top.png", "batdoor_edge.png"},
-	only_placer_can_open = false,
+	tiles = {"batdoor_unlocked.png"},
+	protected = false,
 })
 
 minetest.register_craft({

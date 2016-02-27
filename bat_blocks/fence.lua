@@ -5,7 +5,7 @@
 	minetest.register_node("bat_blocks:bat_fence_black", {
 		description = "Bat Fence Black",
 		drawtype = "fencelike",
-		tiles = {"bat_black.png"},
+		tiles = {"bat_color_black.png"},
 		inventory_image = "bat_fence_black_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -23,7 +23,7 @@
 	minetest.register_node("bat_blocks:bat_fence_white", {
 		description = "Bat Fence White",
 		drawtype = "fencelike",
-		tiles = {"bat_white.png"},
+		tiles = {"bat_color_white.png"},
 		inventory_image = "bat_fence_white_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -41,7 +41,7 @@
 	minetest.register_node("bat_blocks:bat_fence_yellow", {
 		description = "Bat Fence Yellow",
 		drawtype = "fencelike",
-		tiles = {"bat_yellow.png"},
+		tiles = {"bat_color_yellow.png"},
 		inventory_image = "bat_fence_yellow_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -59,7 +59,7 @@
 	minetest.register_node("bat_blocks:bat_fence_blue", {
 		description = "Bat Fence Blue",
 		drawtype = "fencelike",
-		tiles = {"bat_blue.png"},
+		tiles = {"bat_color_blue.png"},
 		inventory_image = "bat_fence_blue_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -77,7 +77,7 @@
 	minetest.register_node("bat_blocks:bat_fence_green", {
 		description = "Bat Fence Green",
 		drawtype = "fencelike",
-		tiles = {"bat_green.png"},
+		tiles = {"bat_color_green.png"},
 		inventory_image = "bat_fence_green_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -95,7 +95,7 @@
 	minetest.register_node("bat_blocks:bat_fence_red", {
 		description = "Bat Fence Red",
 		drawtype = "fencelike",
-		tiles = {"bat_red.png"},
+		tiles = {"bat_color_red.png"},
 		inventory_image = "bat_fence_red_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -113,7 +113,7 @@
 	minetest.register_node("bat_blocks:bat_fence_beige", {
 		description = "Bat Fence Beige",
 		drawtype = "fencelike",
-		tiles = {"bat_beige_block.png"},
+		tiles = {"bat_color_beige.png"},
 		inventory_image = "bat_fence_beige_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
@@ -131,7 +131,7 @@
 	minetest.register_node("bat_blocks:bat_fence_orange", {
 		description = "Bat Fence Orange",
 		drawtype = "fencelike",
-		tiles = {"bat_orange.png"},
+		tiles = {"bat_color_orange.png"},
 		inventory_image = "bat_fence_orange_inv.png",
 		paramtype = "light",
 		is_ground_content = true,
