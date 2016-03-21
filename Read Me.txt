@@ -1,7 +1,0 @@
-The Batmod is a mod pack that I have created as I am learning to mod. 
-
-Much of the code comes from other mods. 
-
-Thanks to everyone who works to make Minetest a better game!
-
-This mod is licenced under wtfpl
