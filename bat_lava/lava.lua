@@ -3,9 +3,9 @@
 
 --remove the -- from the next line and add it to the following line to replace the default lava
 
---minetest.register_node(":default:lava_source", {
+--core.register_node(":default:lava_source", {
 
-minetest.register_node("bat_lava:bat_lava_nw", {
+core.register_node("bat_lava:bat_lava_nw", {
 	description = "Bat Lava Not Walkable",
 	drawtype = "nodebox",
 	tiles = {"lava.png","lava.png","lava.png","lava.png","lava.png","lava.png"},
@@ -21,7 +21,7 @@ minetest.register_node("bat_lava:bat_lava_nw", {
 
 -- Walkable Fake Lava
 
-minetest.register_node("bat_lava:bat_lava_w", {
+core.register_node("bat_lava:bat_lava_w", {
 	description = "Bat Lava Walkable",
 	drawtype = "nodebox",
 	tiles = {"lava.png","lava.png","lava.png","lava.png","lava.png","lava.png"},
@@ -41,7 +41,7 @@ minetest.register_node("bat_lava:bat_lava_w", {
 --
 -- register crafting recipes:
 --
-minetest.register_craft({
+core.register_craft({
 	output = 'bat_lava:bat_lava_nw',
 	recipe = {
 		{'default:stone','default:mese_crystal'},
@@ -49,7 +49,7 @@ minetest.register_craft({
 		}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = 'bat_lava:bat_lava_w',
 	recipe = {
 		{'default:cobble','default:mese_crystal'},

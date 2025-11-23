@@ -1,4 +1,4 @@
-dofile(minetest.get_modpath("bat_lava").."/lava.lua")
+dofile(core.get_modpath("bat_lava").."/lava.lua")
 print("batmod lava loaded")
 
 -----------------------------------------------------------------------
