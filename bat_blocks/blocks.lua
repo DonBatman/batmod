@@ -28,7 +28,7 @@ for i in ipairs(bblocks) do
 local des = bblocks[i][1]
 local itm = bblocks[i][2]
 
-minetest.register_node("bat_blocks:"..itm, {
+core.register_node("bat_blocks:"..itm, {
 	description = des,
 	drawtype = "normal",
     tiles = {itm..".png"},
@@ -41,7 +41,7 @@ end
 
 -- Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_pavers 5",
 	recipe = {
 		{'bat_blocks:bat_block', 'bat_blocks:bat_block', ''},
@@ -50,7 +50,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_block 9",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black'},
@@ -59,7 +59,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_tile 4",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black', ''},
@@ -67,7 +67,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_black_wbat 1",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black'},
@@ -76,7 +76,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_diag 6",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black', 'bat_blocks:bat_color_yellow'},
@@ -85,7 +85,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_x 3",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_yellow', 'bat_blocks:bat_color_black'},
@@ -94,7 +94,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_brick 4",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_black', ''},
@@ -102,7 +102,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_smbrick 4",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_color_yellow', 'bat_blocks:bat_color_black'},
@@ -110,7 +110,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_checker 4",
 	recipe = {
 		{'bat_blocks:bat_color_yellow', 'bat_blocks:bat_color_black', ''},
@@ -119,7 +119,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_checker_sm 6",
 	recipe = {
 		{'bat_blocks:bat_color_yellow', 'bat_blocks:bat_color_black', 'bat_blocks:bat_color_yellow'},
@@ -128,7 +128,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_checker_white 4",
 	recipe = {
 		{'bat_blocks:bat_color_white', 'bat_blocks:bat_color_black', ''},
@@ -137,7 +137,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_checker_sm_white 4",
 	recipe = {
 		{'bat_blocks:bat_color_white', 'bat_blocks:bat_color_black', 'bat_blocks:bat_color_white'},
@@ -146,28 +146,28 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_cobble 2",
 	recipe = {
 		{'bat_blocks:bat_color_black', 'default:cobble', ''}
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_cobble_white 1",
 	recipe = {
 		{'bat_blocks:bat_cobble', 'dye:white', 'dye:white'}
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_cobble_tan 2",
 	recipe = {
 		{'bat_blocks:bat_cobble_white', 'default:sand', ''}
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_black 2",
 	recipe = {
 		{'default:stone', 'dye:black', ''},
@@ -175,7 +175,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_yellow 2",
 	recipe = {
 		{'default:stone', 'dye:yellow', ''},
@@ -183,7 +183,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_white 1",
 	recipe = {
 		{'bat_blocks:bat_white_powder', 'bat_blocks:bat_color_yellow', ''},
@@ -191,14 +191,14 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_beige",
 	recipe = {
 		{"bat_blocks:bat_cobble_white","default:sand"}
 		}	
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_green 2",
 	recipe = {
 		{'default:stone', 'dye:green', ''},
@@ -206,7 +206,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_red 2",
 	recipe = {
 		{'default:stone', 'dye:red', ''},
@@ -214,7 +214,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_blue 2",
 	recipe = {
 		{'default:stone', 'dye:blue', ''},
@@ -222,7 +222,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_color_orange 2",
 	recipe = {
 		{'default:stone', 'dye:orange', ''},

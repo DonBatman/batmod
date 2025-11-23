@@ -2,7 +2,7 @@
 --Bat Fences
 
 -- Bat Black fence
-	minetest.register_node("bat_blocks:bat_fence_black", {
+	core.register_node("bat_blocks:bat_fence_black", {
 		description = "Bat Fence Black",
 		drawtype = "fencelike",
 		tiles = {"bat_color_black.png"},
@@ -20,7 +20,7 @@
 
 
 -- Bat White fence
-	minetest.register_node("bat_blocks:bat_fence_white", {
+	core.register_node("bat_blocks:bat_fence_white", {
 		description = "Bat Fence White",
 		drawtype = "fencelike",
 		tiles = {"bat_color_white.png"},
@@ -38,7 +38,7 @@
 
 
 -- Bat Yellow fence
-	minetest.register_node("bat_blocks:bat_fence_yellow", {
+	core.register_node("bat_blocks:bat_fence_yellow", {
 		description = "Bat Fence Yellow",
 		drawtype = "fencelike",
 		tiles = {"bat_color_yellow.png"},
@@ -56,7 +56,7 @@
 
 
 -- Bat Blue fence
-	minetest.register_node("bat_blocks:bat_fence_blue", {
+	core.register_node("bat_blocks:bat_fence_blue", {
 		description = "Bat Fence Blue",
 		drawtype = "fencelike",
 		tiles = {"bat_color_blue.png"},
@@ -74,7 +74,7 @@
 
 
 -- Bat Green fence
-	minetest.register_node("bat_blocks:bat_fence_green", {
+	core.register_node("bat_blocks:bat_fence_green", {
 		description = "Bat Fence Green",
 		drawtype = "fencelike",
 		tiles = {"bat_color_green.png"},
@@ -92,7 +92,7 @@
 
 
 -- Bat Red fence
-	minetest.register_node("bat_blocks:bat_fence_red", {
+	core.register_node("bat_blocks:bat_fence_red", {
 		description = "Bat Fence Red",
 		drawtype = "fencelike",
 		tiles = {"bat_color_red.png"},
@@ -110,7 +110,7 @@
 
 
 -- Bat Beige fence
-	minetest.register_node("bat_blocks:bat_fence_beige", {
+	core.register_node("bat_blocks:bat_fence_beige", {
 		description = "Bat Fence Beige",
 		drawtype = "fencelike",
 		tiles = {"bat_color_beige.png"},
@@ -128,7 +128,7 @@
 
 
 -- Bat Orange fence
-	minetest.register_node("bat_blocks:bat_fence_orange", {
+	core.register_node("bat_blocks:bat_fence_orange", {
 		description = "Bat Fence Orange",
 		drawtype = "fencelike",
 		tiles = {"bat_color_orange.png"},
@@ -147,7 +147,7 @@
 --Crafts
 
 --black
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_black 6",
 		recipe = {
 			{'','bat_blocks:bat_color_black',''},
@@ -157,7 +157,7 @@ minetest.register_craft({
 	})
 
 --white
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_white 6",
 		recipe = {
 			{'','bat_blocks:bat_color_white',''},
@@ -167,7 +167,7 @@ minetest.register_craft({
 	})
 
 --yellow
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_yellow 6",
 		recipe = {
 			{'','bat_blocks:bat_color_yellow',''},
@@ -177,7 +177,7 @@ minetest.register_craft({
 	})
 
 --blue
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_blue 6",
 		recipe = {
 			{'','bat_blocks:bat_color_blue',''},
@@ -187,7 +187,7 @@ minetest.register_craft({
 	})
 
 --green
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_green 6",
 		recipe = {
 			{'','bat_blocks:bat_color_green',''},
@@ -197,7 +197,7 @@ minetest.register_craft({
 	})
 
 --red
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_red 6",
 		recipe = {
 			{'','bat_blocks:bat_color_red',''},
@@ -207,7 +207,7 @@ minetest.register_craft({
 	})
 
 --beige
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_beige 6",
 		recipe = {
 			{'','bat_blocks:bat_color_beige',''},
@@ -217,7 +217,7 @@ minetest.register_craft({
 	})
 
 --orange
-minetest.register_craft({
+core.register_craft({
 		output = "bat_blocks:bat_fence_orange 6",
 		recipe = {
 			{'','bat_blocks:bat_color_orange',''},

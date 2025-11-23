@@ -1,6 +1,6 @@
 -- Ceiling Block
 
-minetest.register_node("bat_blocks:ceiling_block", {
+core.register_node("bat_blocks:ceiling_block", {
 	description = "Ceiling Tile Block",
 	drawtype = "normal",
 	tiles = {"bat_ceiling.png"},
@@ -11,7 +11,7 @@ minetest.register_node("bat_blocks:ceiling_block", {
 
 --Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:ceiling_block 2",
 	recipe = {
 		{"bat_blocks:bat_color_white","bat_blocks:bat_color_white",""},
@@ -22,7 +22,7 @@ minetest.register_craft({
 
 --Ceiling Tile
 
-minetest.register_node("bat_blocks:ceiling_tile",{
+core.register_node("bat_blocks:ceiling_tile",{
 	description = "Ceiling Tile",
 	drawtype="nodebox",
 	tiles = {"bat_ceiling.png"},
@@ -44,7 +44,7 @@ minetest.register_node("bat_blocks:ceiling_tile",{
 
 --Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:ceiling_tile 3",
 	recipe = {
 		{"bat_blocks:bat_color_white","",""},

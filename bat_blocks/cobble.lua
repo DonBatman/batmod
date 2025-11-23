@@ -1,7 +1,7 @@
 
 -- Bat Cobble Tan Corner---------------------------------------------------------
 
-minetest.register_node("bat_blocks:bat_cobble_tan_corner", {
+core.register_node("bat_blocks:bat_cobble_tan_corner", {
 	description = "Bat Cobble Tan Corner",
 	drawtype = "normal",
     tiles = {"bat_cobble_tan.png",
@@ -19,7 +19,7 @@ minetest.register_node("bat_blocks:bat_cobble_tan_corner", {
 
 -- Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_cobble_tan_corner 2",
 	recipe = {
 		{'bat_blocks:bat_cobble', 'bat_blocks:bat_cobble_tan', ''},
@@ -29,7 +29,7 @@ minetest.register_craft({
 
 -- Bat Cobble Corner---------------------------------------------------------
 
-minetest.register_node("bat_blocks:bat_cobble_corner", {
+core.register_node("bat_blocks:bat_cobble_corner", {
 	description = "Bat Cobble Corner",
 	drawtype = "normal",
     tiles = {"bat_cobble.png",
@@ -48,7 +48,7 @@ minetest.register_node("bat_blocks:bat_cobble_corner", {
 
 -- Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_cobble_corner 2",
 	recipe = {
 		{'bat_blocks:bat_tile', 'bat_blocks:bat_tile', ''},

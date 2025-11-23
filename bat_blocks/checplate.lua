@@ -1,7 +1,7 @@
 
 --ChecPlate-----------------------------------------------------------------------------------------------
 
-minetest.register_node("bat_blocks:bat_checplate", {
+core.register_node("bat_blocks:bat_checplate", {
 	description = "Bat Checker Plate",
 	drawtype = "nodebox",
 		tiles = {
@@ -27,7 +27,7 @@ minetest.register_node("bat_blocks:bat_checplate", {
 
 -- Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_checplate 9",
 	recipe = {
 		{'bat_blocks:bat_block', 'dye:grey', 'dye:grey'}
@@ -36,7 +36,7 @@ minetest.register_craft({
 
 --ChecPlate Block----------------------------------------------------------------------------------
 
-minetest.register_node("bat_blocks:bat_checplate_block", {
+core.register_node("bat_blocks:bat_checplate_block", {
 	description = "Bat Checker Plate Block",
 	drawtype = "normal",
 		tiles = {
@@ -47,7 +47,7 @@ minetest.register_node("bat_blocks:bat_checplate_block", {
 })
 -- Craft
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_checplate_block 9",
 	recipe = {
 		{'','bat_blocks:bat_checplate', ''},

@@ -14,7 +14,7 @@ doors.register_door("bat_blocks:bat_door", {
 	protected = true,
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_door",
 	recipe = {
 		{"bat_blocks:bat_color_black", "default:tree"},
@@ -33,7 +33,7 @@ doors.register_door("bat_blocks:bat_door_unlocked", {
 	protected = false,
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_blocks:bat_door_unlocked",
 	recipe = {
 		{"bat_blocks:bat_color_black", "default:tree"},
@@ -44,13 +44,13 @@ minetest.register_craft({
 ----trapdoor----
 
 local function update_node(pos, node) 
-	minetest.set_node(pos, node)
+	core.set_node(pos, node)
 end
 
 local function punch(pos)
-	local meta = minetest.get_meta(pos)
+	local meta = core.get_meta(pos)
 	local state = meta:get_int("state")
-	local me = minetest.get_node(pos)
+	local me = core.get_node(pos)
 	local tmp_node
 	local tmp_node2
 	oben = {x=pos.x, y=pos.y, z=pos.z}
@@ -64,7 +64,7 @@ local function punch(pos)
 		update_node(pos, tmp_node)
 		meta:set_int("state", state)
 end
-minetest.register_node("bat_blocks:bat_trapdoor", {
+core.register_node("bat_blocks:bat_trapdoor", {
 	description = "Trapdoor",
 	inventory_image = "bat_trapdoor.png",
 	drawtype = "nodebox",
@@ -88,7 +88,7 @@ minetest.register_node("bat_blocks:bat_trapdoor", {
 	end,
 })
 
-minetest.register_node("bat_blocks:bat_trapdoor_open", {
+core.register_node("bat_blocks:bat_trapdoor_open", {
 	drawtype = "nodebox",
 	tiles = {"bat_trap_side.png", "bat_trap_side.png",  "bat_trap_side.png",  "bat_trap_side.png", "bat_trapdoor.png", "bat_trapdoor.png"},
 	paramtype = "light",
@@ -112,7 +112,7 @@ minetest.register_node("bat_blocks:bat_trapdoor_open", {
 	end,
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = 'bat_blocks:bat_trapdoor 2',
 	recipe = {
 		{'bat_blocks:bat_color_black', 'bat_blocks:bat_rod_black', ''},
