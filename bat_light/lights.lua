@@ -1,7 +1,7 @@
 
 --Bat Light
 --------------------------------------------------------------------------------
-minetest.register_node("bat_light:bat_light", {
+core.register_node("bat_light:bat_light", {
 	description = "Bat Light",
 	tiles = {"bat_color_yellow.png"},
 	drawtype = "nodebox",
@@ -32,7 +32,7 @@ minetest.register_node("bat_light:bat_light", {
 --Crafts
 ---------------------------------------------------
 --Bat Light
-minetest.register_craft({
+core.register_craft({
 	output = "bat_light:bat_light 3",
 	recipe = {
 		{'bat_glass:bat_glass', 'bat_glass:bat_glass2', ''},
@@ -45,7 +45,7 @@ minetest.register_craft({
 --Lantern
 ---------------------------------------------------------------------------------
 
-minetest.register_node("bat_light:bat_lantern", {
+core.register_node("bat_light:bat_lantern", {
 	description = "Bat Lantern",
 	tiles = {
 		"bat_lanterntb.png",
@@ -75,7 +75,7 @@ minetest.register_node("bat_light:bat_lantern", {
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "bat_light:bat_lantern 1",
 		recipe = {
 			{'','bat_blocks:bat_color_black',''},
@@ -83,7 +83,7 @@ minetest.register_craft({
 			{'','default:torch',''}
 			}
 })
-minetest.register_node("bat_light:bat_lantern_sm", {
+core.register_node("bat_light:bat_lantern_sm", {
 	description = "Bat Lantern Small",
 	paramtype = "light",
 	groups = {cracky = 1},
@@ -123,7 +123,7 @@ minetest.register_node("bat_light:bat_lantern_sm", {
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "bat_light:bat_lantern_sm 1",
 		recipe = {
 			{'','bat_blocks:bat_color_black',''},
@@ -133,7 +133,7 @@ minetest.register_craft({
 })
 --Sewer Light
 --------------------------------------------------------------------------------
-minetest.register_node("bat_light:sewer_light", {
+core.register_node("bat_light:sewer_light", {
 	description = "Sewer Light",
 	tiles = {"sewer_light.png"},
 	drawtype = "nodebox",
@@ -152,7 +152,7 @@ minetest.register_node("bat_light:sewer_light", {
 
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "bat_light:sewer_light 9",
 	recipe = {
 		{'', 'bat_blocks:bat_color_yellow', ''},

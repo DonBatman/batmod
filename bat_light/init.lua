@@ -1,7 +1,7 @@
-dofile(minetest.get_modpath("bat_light").."/bat_lamp_post.lua")
-dofile(minetest.get_modpath("bat_light").."/trafficlight.lua")
-dofile(minetest.get_modpath("bat_light").."/cubes.lua")
-dofile(minetest.get_modpath("bat_light").."/lights.lua")
+dofile(core.get_modpath("bat_light").."/bat_lamp_post.lua")
+dofile(core.get_modpath("bat_light").."/trafficlight.lua")
+dofile(core.get_modpath("bat_light").."/cubes.lua")
+dofile(core.get_modpath("bat_light").."/lights.lua")
 print("bat light loaded")
 
 -----------------------------------------------------------------------

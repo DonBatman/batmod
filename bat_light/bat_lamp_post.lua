@@ -2,7 +2,7 @@
 
 --register the bottom node box
 
-minetest.register_node("bat_light:bat_lpost", {
+core.register_node("bat_light:bat_lpost", {
 	description = "Bat Lamp Post",
 	inventory_image = "batlpost_inv.png",
 	wield_image = "batlpost_inv2.png",
@@ -27,39 +27,39 @@ minetest.register_node("bat_light:bat_lpost", {
 	},
 --once placed it sets the middle and top nodes
 	after_place_node = function(pos)
-		minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z},{name = "bat_light:bat_lpost_top"})
-		minetest.set_node({x = pos.x, y = pos.y + 2, z = pos.z},{name = "bat_light:bat_lantern_p"})
+		core.set_node({x = pos.x, y = pos.y + 1, z = pos.z},{name = "bat_light:bat_lpost_top"})
+		core.set_node({x = pos.x, y = pos.y + 2, z = pos.z},{name = "bat_light:bat_lantern_p"})
 	end,
 --when you dig this removes the 2 nodes above
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		local pos2 = { x = pos.x, y=pos.y + 1, z = pos.z }
-		if minetest.get_node(pos2).name == "bat_light:bat_lpost_top" then
-			minetest.remove_node(pos2)
+		if core.get_node(pos2).name == "bat_light:bat_lpost_top" then
+			core.remove_node(pos2)
 		end
 		local pos3 = { x = pos.x, y=pos.y + 2, z = pos.z }
-		if minetest.get_node(pos3).name == "bat_light:bat_lantern_p" then
-			minetest.remove_node(pos3)
+		if core.get_node(pos3).name == "bat_light:bat_lantern_p" then
+			core.remove_node(pos3)
 		end
 	end,
 
 --this checks to make sure there is enough space above to place it. without this any blocks above would be replaced
     on_place = function(itemstack, placer, pointed_thing)
         local pos = pointed_thing.above
-        if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name ~= "air" then
-            minetest.chat_send_player( placer:get_player_name(), "Not enough vertical space to place a server!" )
+        if core.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name ~= "air" then
+            core.chat_send_player( placer:get_player_name(), "Not enough vertical space to place a server!" )
             return
         end
         local pos = pointed_thing.above
-        if minetest.get_node({x=pos.x, y=pos.y+2, z=pos.z}).name ~= "air" then
-            minetest.chat_send_player( placer:get_player_name(), "Not enough vertical space to place a server!" )
+        if core.get_node({x=pos.x, y=pos.y+2, z=pos.z}).name ~= "air" then
+            core.chat_send_player( placer:get_player_name(), "Not enough vertical space to place a server!" )
             return
         end
-        return minetest.item_place(itemstack, placer, pointed_thing)
+        return core.item_place(itemstack, placer, pointed_thing)
     end
 })
 
 --register the middle node
-minetest.register_node("bat_light:bat_lpost_top", {
+core.register_node("bat_light:bat_lpost_top", {
 	tiles = {
 		"bat_lanterntb.png",
 		"bat_lanterntb.png",
@@ -81,18 +81,18 @@ minetest.register_node("bat_light:bat_lpost_top", {
 -- after dig this removes the node above and below
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		local pos2 = { x = pos.x, y=pos.y + 1, z = pos.z }
-		if minetest.get_node(pos2).name == "bat_light:bat_lantern_p" then
-			minetest.remove_node(pos2)
+		if core.get_node(pos2).name == "bat_light:bat_lantern_p" then
+			core.remove_node(pos2)
 		end
 		local pos3 = { x = pos.x, y=pos.y - 1, z = pos.z }
-		if minetest.get_node(pos3).name == "bat_light:bat_lpost" then
-			minetest.remove_node(pos3)
+		if core.get_node(pos3).name == "bat_light:bat_lpost" then
+			core.remove_node(pos3)
 		end
 	end,
 })
 --Lantern
 
-minetest.register_node("bat_light:bat_lantern_p", {
+core.register_node("bat_light:bat_lantern_p", {
 	tiles = {
 		"bat_lanterntb.png",
 		"bat_lanterntb.png",
@@ -123,18 +123,18 @@ minetest.register_node("bat_light:bat_lantern_p", {
 --after dig this removes the 2 nodes below
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		local pos2 = { x = pos.x, y=pos.y - 1, z = pos.z }
-		if minetest.get_node(pos2).name == "bat_light:bat_lpost_top" then
-			minetest.remove_node(pos2)
+		if core.get_node(pos2).name == "bat_light:bat_lpost_top" then
+			core.remove_node(pos2)
 		end
 		local pos3 = { x = pos.x, y=pos.y - 2, z = pos.z }
-		if minetest.get_node(pos3).name == "bat_light:bat_lpost" then
-			minetest.remove_node(pos3)
+		if core.get_node(pos3).name == "bat_light:bat_lpost" then
+			core.remove_node(pos3)
 		end
 	end,
 })
 
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "bat_light:bat_lpost 1",
 		recipe = {
 			{'','bat_light:bat_lantern',''},

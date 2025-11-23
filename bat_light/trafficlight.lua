@@ -1,6 +1,6 @@
 
 
-minetest.register_node("bat_light:trafic_light", {
+core.register_node("bat_light:trafic_light", {
 	description = "Trafic Light",
 	tiles = {
 		"bat_lanterntb.png",
@@ -34,7 +34,7 @@ minetest.register_node("bat_light:trafic_light", {
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "bat_light:trafic_light 1",
 		recipe = {
 			{'bat_blocks:bat_color_black','bat_blocks:bat_color_red','bat_blocks:bat_color_black'},
