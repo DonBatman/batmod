@@ -1,9 +1,9 @@
 
 
-minetest.register_alias("ubt", "bat_tools:ultimate_bat_tool")
-minetest.register_alias("ubtd", "bat_tools:ultimate_bat_tool_drop")
+core.register_alias("ubt", "bat_tools:ultimate_bat_tool")
+core.register_alias("ubtd", "bat_tools:ultimate_bat_tool_drop")
 
-minetest.register_tool("bat_tools:ultimate_bat_tool", {
+core.register_tool("bat_tools:ultimate_bat_tool", {
 	description = "Ultimate Bat Tool",
 	inventory_image = "ultimate_bat_tool2.png",
 	groups = {not_in_creative_inventory=1},
@@ -21,7 +21,7 @@ minetest.register_tool("bat_tools:ultimate_bat_tool", {
 		}
 	},
 })
-minetest.register_tool("bat_tools:ultimate_bat_tool_drop", {
+core.register_tool("bat_tools:ultimate_bat_tool_drop", {
 	description = "Ultimate Bat Tool With Drops",
 	inventory_image = "ultimate_bat_tool.png",
 	groups = {not_in_creative_inventory=1},
@@ -39,10 +39,10 @@ minetest.register_tool("bat_tools:ultimate_bat_tool_drop", {
 		}
 	},
 })
-minetest.register_on_punchnode(function(pos, node, puncher)
+core.register_on_punchnode(function(pos, node, puncher)
 	if puncher:get_wielded_item():get_name() == "bat_tools:ultimate_bat_tool"
-	and minetest.env: get_node(pos).name ~= "air" then
-		minetest.env:remove_node(pos)
+	and core.env: get_node(pos).name ~= "air" then
+		core.env:remove_node(pos)
 	end
 end)
 

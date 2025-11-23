@@ -1,6 +1,6 @@
 
 --Pick
-minetest.register_tool("bat_tools:bat_pick", {
+core.register_tool("bat_tools:bat_pick", {
 	description = "Bat Pick",
 	inventory_image = "batpick.png",
 	tool_capabilities = {
@@ -14,10 +14,10 @@ minetest.register_tool("bat_tools:bat_pick", {
 	}
 })
 
-minetest.register_alias("batmod:bat_pick", "bat_tools:bat_pick")
+core.register_alias("batmod:bat_pick", "bat_tools:bat_pick")
 
 --Shovel
-minetest.register_tool("bat_tools:bat_shovel", {
+core.register_tool("bat_tools:bat_shovel", {
 	description = "Bat Shovel",
 	inventory_image = "batshovel.png",
 	tool_capabilities = {
@@ -31,10 +31,10 @@ minetest.register_tool("bat_tools:bat_shovel", {
 	}
 })
 
-minetest.register_alias("batmod:bat_shovel", "bat_tools:bat_shovel")
+core.register_alias("batmod:bat_shovel", "bat_tools:bat_shovel")
 
 --Axe
-minetest.register_tool("bat_tools:bat_axe", {
+core.register_tool("bat_tools:bat_axe", {
 	description = "Bat Axe",
 	inventory_image = "bataxe.png",
 	tool_capabilities = {
@@ -48,10 +48,10 @@ minetest.register_tool("bat_tools:bat_axe", {
 	}
 })
 
-minetest.register_alias("batmod:bat_axe", "bat_tools:bat_axe")
+core.register_alias("batmod:bat_axe", "bat_tools:bat_axe")
 
 --Sword
-minetest.register_tool("bat_tools:bat_sword", {
+core.register_tool("bat_tools:bat_sword", {
 	description = "Bat Sword",
 	inventory_image = "batsword.png",
 	tool_capabilities = {
@@ -65,10 +65,10 @@ minetest.register_tool("bat_tools:bat_sword", {
 	}
 })
 
-minetest.register_alias("batmod:bat_sword", "bat_tools:bat_sword")
+core.register_alias("batmod:bat_sword", "bat_tools:bat_sword")
 
 --Bat_tle Axe
-minetest.register_tool("bat_tools:bat_tleaxe", {
+core.register_tool("bat_tools:bat_tleaxe", {
 	description = "Bat_tleaxe",
 	inventory_image = "bat_tleaxe.png",
 	tool_capabilities = {
@@ -82,7 +82,7 @@ minetest.register_tool("bat_tools:bat_tleaxe", {
 	}
 })
 
-minetest.register_alias("batmod:bat_tleaxe", "bat_tools:bat_tleaxe")
+core.register_alias("batmod:bat_tleaxe", "bat_tools:bat_tleaxe")
 
 --Bat Hoe
 
@@ -105,7 +105,7 @@ farming.register_hoe(":bat_tools:bat_hoe", {
 
 --Pick
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_tools:bat_pick",
 	recipe = {
 		{'bat_blocks:bat_rod_yellow', 'bat_blocks:bat_rod_yellow', 'bat_blocks:bat_rod_yellow'},
@@ -116,7 +116,7 @@ minetest.register_craft({
 
 --Axe
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_tools:bat_axe 1",
 	recipe = {
 		{'bat_blocks:bat_rod_yellow', 'bat_blocks:bat_rod_yellow', ''},
@@ -127,7 +127,7 @@ minetest.register_craft({
 
 --Shovel
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_tools:bat_shovel 1",
 	recipe = {
 		{'', 'bat_blocks:bat_rod_yellow', ''},
@@ -139,7 +139,7 @@ minetest.register_craft({
 
 --Sword
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_tools:bat_sword 1",
 	recipe = {
 		{'', 'bat_blocks:bat_rod_yellow', ''},
@@ -150,7 +150,7 @@ minetest.register_craft({
 
 --Bat_tleaxe
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_tools:bat_tleaxe 1",
 	recipe = {
 		{'bat_blocks:bat_rod_yellow', 'bat_blocks:bat_rod_black', 'bat_blocks:bat_rod_yellow'},

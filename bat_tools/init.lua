@@ -1,5 +1,5 @@
-dofile(minetest.get_modpath("bat_tools").."/tools.lua")
-dofile(minetest.get_modpath("bat_tools").."/ultimate_bat_tool.lua")
+dofile(core.get_modpath("bat_tools").."/tools.lua")
+dofile(core.get_modpath("bat_tools").."/ultimate_bat_tool.lua")
 print("bat_tools loaded")
 
 -----------------------------------------------------------------------
