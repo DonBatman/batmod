@@ -1,5 +1,5 @@
-dofile(minetest.get_modpath("bat_ladders").."/ladders.lua")
-dofile(minetest.get_modpath("bat_ladders").."/bat_rope.lua")
+dofile(core.get_modpath("bat_ladders").."/ladders.lua")
+dofile(core.get_modpath("bat_ladders").."/bat_rope.lua")
 print("bat_ladders loaded")
 
 -----------------------------------------------------------------------

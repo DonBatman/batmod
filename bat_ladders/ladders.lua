@@ -7,7 +7,7 @@
 
 --BatLadder
 
-minetest.register_node("bat_ladders:bat_ladder", {
+core.register_node("bat_ladders:bat_ladder", {
 	description = "Bat_Ladder",
 	drawtype = "signlike",
 	tiles = {"bat_ladder.png"},
@@ -31,7 +31,7 @@ minetest.register_node("bat_ladders:bat_ladder", {
 
 --3d Bat Ladder
 
-minetest.register_node("bat_ladders:bat_3dladder", {
+core.register_node("bat_ladders:bat_3dladder", {
         description = "Bat 3d Ladder",
         drawtype = "nodebox",
         tiles = {"bat_ladder_top.png",
@@ -74,7 +74,7 @@ minetest.register_node("bat_ladders:bat_3dladder", {
 
 -- Bat Ladder
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_ladders:bat_ladder 2",
 	recipe = {
 		{'bat_blocks:bat_rod_black', '', 'bat_blocks:bat_rod_black'},
@@ -85,7 +85,7 @@ minetest.register_craft({
 
 --Bat 3d Ladder
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_ladders:bat_3dladder 2",
 	recipe = {
 		{'bat_blocks:bat_rod_black', '', 'bat_blocks:bat_rod_black'},

@@ -1,7 +1,7 @@
 
 -- Bat Rope
 
-minetest.register_node("bat_ladders:bat_rope", {
+core.register_node("bat_ladders:bat_rope", {
 	description = "Bat Rope",
 	paramtype = "light",
 	walkable = false,
@@ -26,7 +26,7 @@ minetest.register_node("bat_ladders:bat_rope", {
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = 'bat_ladders:bat_rope 3',
 	recipe = {
 		{'bat_blocks:bat_rubber_raw', '', ''},
@@ -39,7 +39,7 @@ minetest.register_craft({
 ------------------------------------------------------------------------------
 
 
-minetest.register_node("bat_ladders:bat_rope_for_box", {
+core.register_node("bat_ladders:bat_rope_for_box", {
     description = "Rope for Ropebox",
     drawtype = "nodebox",
     paramtype = "light",
@@ -63,14 +63,14 @@ minetest.register_node("bat_ladders:bat_rope_for_box", {
 		}
 	},
     after_destruct = function(pos,oldnode)
-        local node = minetest.get_node({x=pos.x,y=pos.y-1,z=pos.z})
+        local node = core.get_node({x=pos.x,y=pos.y-1,z=pos.z})
         if node.name == "bat_ladders:bat_rope_for_box" then 
-            minetest.remove_node({x=pos.x,y=pos.y-1,z=pos.z})
+            core.remove_node({x=pos.x,y=pos.y-1,z=pos.z})
         end
     end,
 })
 
-minetest.register_node("bat_ladders:bat_ropebox", {
+core.register_node("bat_ladders:bat_ropebox", {
     description = "Ropebox Block",
     drawtype = "nodebox",
     sunlight_propagates = true,
@@ -95,34 +95,34 @@ minetest.register_node("bat_ladders:bat_ropebox", {
 		},
 	},
     after_destruct = function(pos,oldnode)
-        local node = minetest.get_node({x=pos.x,y=pos.y-1,z=pos.z})
+        local node = core.get_node({x=pos.x,y=pos.y-1,z=pos.z})
         if node.name == "bat_ladders:bat_rope_for_box" then 
-            minetest.remove_node({x=pos.x,y=pos.y-1,z=pos.z})
+            core.remove_node({x=pos.x,y=pos.y-1,z=pos.z})
         end
     end,
 })
 
-minetest.register_abm({
+core.register_abm({
 	nodenames = {"bat_ladders:bat_ropebox"},
 	interval = 1,
 	chance = 1,
 	action = function(pos, node)
-	if minetest.get_node({x=pos.x,y=pos.y-1,z=pos.z}).name ~= 'air'  then return end
-	        minetest.add_node({x=pos.x,y=pos.y-1,z=pos.z}, {name="bat_ladders:bat_rope_for_box"})
+	if core.get_node({x=pos.x,y=pos.y-1,z=pos.z}).name ~= 'air'  then return end
+	        core.add_node({x=pos.x,y=pos.y-1,z=pos.z}, {name="bat_ladders:bat_rope_for_box"})
 	end
 })
 
-minetest.register_abm({
+core.register_abm({
 	nodenames = {"bat_ladders:bat_rope_for_box"},
 	interval = 1,
 	chance = 1,
 	action = function(pos, node)
-	if minetest.get_node({x=pos.x,y=pos.y-1,z=pos.z}).name ~= 'air'  then return end
-	        minetest.add_node({x=pos.x,y=pos.y-1,z=pos.z}, {name="bat_ladders:bat_rope_for_box"})
+	if core.get_node({x=pos.x,y=pos.y-1,z=pos.z}).name ~= 'air'  then return end
+	        core.add_node({x=pos.x,y=pos.y-1,z=pos.z}, {name="bat_ladders:bat_rope_for_box"})
 	end
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bat_ladders:bat_ropebox",
 	recipe = {
 		{"bat_blocks:bat_color_black"},
