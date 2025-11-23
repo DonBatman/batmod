@@ -1,7 +1,7 @@
 
 --Glass Pane
 
-minetest.register_node("bat_glass:bat_glass_pane", {
+core.register_node("bat_glass:bat_glass_pane", {
 	description = "Bat Glass Pane",
 	tiles = {
 		"bat_glass_glass3.png",
@@ -12,11 +12,12 @@ minetest.register_node("bat_glass:bat_glass_pane", {
 		"bat_glass_glass2.png"
 	},
 	drawtype = "nodebox",
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
 		fixed = {
-			{-0.5, -0.5, 0, 0.5, 0.5, 0.1875}, -- NodeBox1
+			{-0.5, -0.5, 0, 0.5, 0.5, 0.1875},
 		}
 	},
 	paramtype2 = "facedir",
@@ -26,7 +27,7 @@ minetest.register_node("bat_glass:bat_glass_pane", {
 })
 
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "bat_glass:bat_glass_pane 6",
 		recipe = {
 			{'bat_glass:bat_glass_white','bat_glass:bat_glass_white','bat_glass:bat_glass_white'},
